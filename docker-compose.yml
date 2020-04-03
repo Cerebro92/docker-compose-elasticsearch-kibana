@@ -10,6 +10,9 @@ services:
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ulimits:
       nproc: 65535
+      nofile:
+        soft: 65536
+        hard: 65536
       memlock:
         soft: -1
         hard: -1
@@ -39,6 +42,9 @@ services:
       - "discovery.zen.ping.unicast.hosts=elasticsearch"
     ulimits:
       nproc: 65535
+      nofile:
+        soft: 65536
+        hard: 65536
       memlock:
         soft: -1
         hard: -1
@@ -65,6 +71,9 @@ services:
       - "discovery.zen.ping.unicast.hosts=elasticsearch"
     ulimits:
       nproc: 65535
+      nofile:
+        soft: 65536
+        hard: 65536
       memlock:
         soft: -1
         hard: -1
